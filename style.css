@@ -1,0 +1,110 @@
+body {
+  margin: 0px;
+  width: 100%;
+  height: 100vh;
+  background-color: cyan;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin: 10px 0px;
+}
+
+.main-container {
+  display: flex;
+  gap: 85px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__logo {
+  width: 87px;
+}
+
+.main__card-container {
+  background-color: darkcyan;
+  padding: 35px 3.78%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card__info-container {
+  margin-right: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info__bill-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 45px;
+}
+
+.bill__input {
+  padding: 10px;
+  grid-column: span 2;
+  background-image: url("./images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  text-align: right;
+}
+
+.info__tip-container {
+  display: grid;
+  column-gap: 15px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto 60px 60px;
+}
+
+.tip__label {
+  grid-column: span 6;
+}
+
+.tip__percentage-label {
+  position: absolute;
+}
+
+.tip__percentage {
+  margin-bottom: 15px;
+  grid-column: span 2;
+  text-align: right;
+}
+
+.info__num-people-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 45px;
+}
+
+.num-people__input {
+  padding: 10px;
+  grid-column: span 2;
+  background-image: url("./images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  text-align: right;
+}
+
+.card__result-container {
+  padding: 40px 9%;
+  background-color: cyan;
+  display: grid;
+}
+
+.result__tip-container,
+.result__total-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  align-items: center;
+}
+
+.tip__amount,
+.total__amount {
+  grid-row: span 2;
+  text-align: right;
+}

@@ -12,54 +12,102 @@
       href="./images/favicon-32x32.png"
     />
 
+    <link rel="stylesheet" href="./style.css" />
+
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
-    <main>
-      <img src="./images/logo.svg" alt="Logo" />
-      <div>
-        <div>
-          <div>
-            <label for="bill">Bill</label>
-            <p>Can't be zero</p>
-            <img src="./images/icon-dollar.svg" alt="Dollar icon" />
-            <input type="number" name="bill" id="bill" value="0" />
+    <main class="main-container">
+      <img src="./images/logo.svg" alt="Logo" class="main__logo" />
+      <div class="main__card-container">
+        <div class="card__info-container">
+          <div class="info__bill-container">
+            <label for="bill" class="bill__label">Bill</label>
+            <p class="bill__error">Can't be zero</p>
+            <input
+              type="number"
+              name="bill"
+              id="bill"
+              class="bill__input"
+              placeholder="0"
+              autocomplete="off"
+            />
           </div>
-          <div>
-            <p>Select Tip %</p>
-            <label for="perc_5"></label>
-            <input type="button" value="5%" id="perc_5" />
-            <label for="perc_10"></label>
-            <input type="button" value="10%" id="perc_10" />
-            <label for="perc_15"></label>
-            <input type="button" value="15%" id="perc_15" />
-            <label for="perc_25"></label>
-            <input type="button" value="25%" id="perc_25" />
-            <label for="perc_50"></label>
-            <input type="button" value="50%" id="perc_50" />
-            <label for="perc_cust"></label>
-            <input type="text" name="perc_cust" id="perc_cust" value="Custom" />
+          <div class="info__tip-container">
+            <p class="tip__label">Select Tip %</p>
+            <label for="perc_5" class="tip__percentage-label"></label>
+            <input
+              type="button"
+              value="5%"
+              id="perc_5"
+              class="tip__percentage"
+            />
+            <label for="perc_10" class="tip__percentage-label"></label>
+            <input
+              type="button"
+              value="10%"
+              id="perc_10"
+              class="tip__percentage"
+            />
+            <label for="perc_15" class="tip__percentage-label"></label>
+            <input
+              type="button"
+              value="15%"
+              id="perc_15"
+              class="tip__percentage"
+            />
+            <label for="perc_25" class="tip__percentage-label"></label>
+            <input
+              type="button"
+              value="25%"
+              id="perc_25"
+              class="tip__percentage"
+            />
+            <label for="perc_50" class="tip__percentage-label"></label>
+            <input
+              type="button"
+              value="50%"
+              id="perc_50"
+              class="tip__percentage"
+            />
+            <label for="perc_cust" class="tip__percentage-label"></label>
+            <input
+              type="text"
+              name="perc_cust"
+              id="perc_cust"
+              class="tip__percentage"
+              placeholder="Custom"
+              autocomplete="off"
+            />
           </div>
-          <div>
-            <label for="num_people">Number of People</label>
-            <p>Can't be zero</p>
-            <img src="./images/icon-person.svg" alt="Person icon" />
-            <input type="number" name="num_people" id="num_people" />
+          <div class="info__num-people-container">
+            <label for="num_people" class="num-people__label"
+              >Number of People</label
+            >
+            <p class="num-people__error">Can't be zero</p>
+            <input
+              type="number"
+              name="num_people"
+              id="num_people"
+              class="num-people__input"
+              placeholder="0"
+              autocomplete="off"
+            />
           </div>
         </div>
 
-        <div>
-          <div>
-            <p>Tip Amount</p>
-            <p>$0.00</p>
-            <p>/ person</p>
+        <div class="card__result-container">
+          <div class="result__tip-container">
+            <p class="tip-result__label">Tip Amount</p>
+            <p class="tip__amount">$0.00</p>
+            <p class="tip__desc">/ person</p>
           </div>
-          <div>
-            <p>Total</p>
-            <p>$0.00</p>
-            <p>/ person</p>
+          <div class="result__total-container">
+            <p class="total__label">Total</p>
+            <p class="total__amount">$0.00</p>
+            <p class="total__desc">/ person</p>
           </div>
-          <button type="submit">Reset</button>
+          <button type="submit" class="result__reset">Reset</button>
         </div>
       </div>
     </main>
