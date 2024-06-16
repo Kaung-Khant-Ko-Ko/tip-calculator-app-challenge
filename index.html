@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <main>
+      <img src="./images/logo.svg" alt="Logo" />
+      <div>
+        <div>
+          <div>
+            <label for="bill">Bill</label>
+            <p>Can't be zero</p>
+            <img src="./images/icon-dollar.svg" alt="Dollar icon" />
+            <input type="number" name="bill" id="bill" value="0" />
+          </div>
+          <div>
+            <p>Select Tip %</p>
+            <label for="perc_5"></label>
+            <input type="button" value="5%" id="perc_5" />
+            <label for="perc_10"></label>
+            <input type="button" value="10%" id="perc_10" />
+            <label for="perc_15"></label>
+            <input type="button" value="15%" id="perc_15" />
+            <label for="perc_25"></label>
+            <input type="button" value="25%" id="perc_25" />
+            <label for="perc_50"></label>
+            <input type="button" value="50%" id="perc_50" />
+            <label for="perc_cust"></label>
+            <input type="text" name="perc_cust" id="perc_cust" value="Custom" />
+          </div>
+          <div>
+            <label for="num_people">Number of People</label>
+            <p>Can't be zero</p>
+            <img src="./images/icon-person.svg" alt="Person icon" />
+            <input type="number" name="num_people" id="num_people" />
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <p>Tip Amount</p>
+            <p>$0.00</p>
+            <p>/ person</p>
+          </div>
+          <div>
+            <p>Total</p>
+            <p>$0.00</p>
+            <p>/ person</p>
+          </div>
+          <button type="submit">Reset</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
