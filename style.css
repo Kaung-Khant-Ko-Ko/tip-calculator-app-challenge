@@ -4,10 +4,6 @@ body {
   height: 100vh;
   background-color: hsl(185, 41%, 84%);
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   font-family: "Space Mono", monospace;
   font-size: 18px;
   font-weight: 700;
@@ -18,7 +14,14 @@ p {
   margin: 0px;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0px;
+}
+
 .main-container {
+  margin-top: 5%;
   display: flex;
   gap: 85px;
   flex-direction: column;
@@ -66,18 +69,24 @@ p {
   background-position: 10px center;
   text-align: right;
 
-  border: 0px;
+  border: 2px solid hsl(189, 41%, 97%);
+  border-radius: 5px;
 
   font-family: "Space Mono", monospace;
-  font-size: 24px;
+  font-size: calc(1em + 6px);
   font-weight: 700;
   color: hsl(183, 100%, 15%);
 }
 
 .bill__input::placeholder {
-  font-size: 24px;
+  font-size: calc(1em + 6px);
   font-weight: 700;
   color: hsl(185, 41%, 84%);
+}
+
+.bill__input:hover {
+  cursor: pointer;
+  border-color: hsl(172, 67%, 45%);
 }
 
 .info__tip-container {
@@ -102,21 +111,43 @@ p {
   text-align: center;
 
   background-color: hsl(183, 100%, 15%);
-  border: 0px;
+  border: 2px solid hsl(189, 41%, 97%);
   border-radius: 5px;
 
   font-family: "Space Mono", monospace;
-  font-size: 24px;
+  font-size: calc(1em + 6px);
   font-weight: 700;
   color: hsl(0, 0%, 100%);
 }
 
 .tip__percentage--cust {
   padding: 10px;
+  max-width: 120px;
+  margin-top: 15px;
+  grid-column: span 2;
+
   background-color: hsl(189, 41%, 97%);
-  color: hsl(186, 14%, 43%);
+  border: 2px solid hsl(189, 41%, 97%);
+  border-radius: 5px;
+
+  font-family: "Space Mono", monospace;
+  font-size: calc(1em + 6px);
+  font-weight: 700;
   text-align: right;
   color: hsl(183, 100%, 15%);
+}
+
+.tip__percentage--cust::placeholder {
+  font-size: 24px;
+  font-weight: 700;
+  color: hsl(186, 14%, 43%);
+  text-align: center;
+}
+
+.tip__percentage:hover,
+.tip__percentage--cust:hover {
+  cursor: pointer;
+  border-color: hsl(172, 67%, 45%);
 }
 
 .info__num-people-container {
@@ -135,18 +166,24 @@ p {
   background-position: 10px center;
   text-align: right;
 
-  border: 0px;
+  border: 2px solid hsl(189, 41%, 97%);
+  border-radius: 5px;
 
   font-family: "Space Mono", monospace;
-  font-size: 24px;
+  font-size: calc(1em + 6px);
   font-weight: 700;
   color: hsl(183, 100%, 15%);
 }
 
 .num-people__input::placeholder {
-  font-size: 24px;
+  font-size: calc(1em + 6px);
   font-weight: 700;
   color: hsl(185, 41%, 84%);
+}
+
+.num-people__input:hover {
+  cursor: pointer;
+  border-color: hsl(172, 67%, 45%);
 }
 
 .card__result-container {
@@ -188,7 +225,48 @@ p {
   background-color: hsl(186, 14%, 43%);
   border: 0px;
   font-family: "Space Mono", monospace;
-  font-size: 24px;
+  font-size: calc(1em + 6px);
   font-weight: 700;
   color: hsl(183, 100%, 15%);
+  border-radius: 5px;
+}
+
+.result__reset:hover {
+  cursor: pointer;
+  background-color: hsl(172, 67%, 45%);
+}
+
+@media (max-width: 930px) {
+  .main__card-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .card__info-container {
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+
+  .tip__percentage {
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+
+  .tip__percentage,
+  .tip__percentage::placeholder,
+  .tip__percentage--cust,
+  .tip__percentage--cust::placeholder {
+    font-size: calc(1em + 3px);
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    font-size: 12px;
+  }
 }
